@@ -50,7 +50,12 @@ class Navbar extends Component {
     return (
       <div className="navbar">
         <div className="left-nav">
-          <div className="hidden-menu" style={{ display: this.state.display }}>
+          <div
+            className="hidden-menu"
+            style={{
+              display: this.state.display,
+            }}
+          >
             <span className="nav-close-btn" onClick={this.handleNavClose}>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/889/889590.png"

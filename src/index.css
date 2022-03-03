@@ -179,7 +179,7 @@ ul {
   padding: 5px;
   cursor: pointer;
 }
-.movies-list {
+.movie-list {
   width: 100%;
   height: auto;
   display: flex;
@@ -194,26 +194,13 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   font-weight: 600;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.background-card {
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  bottom: 10px;
-  left: 50px;
-  opacity: 0.3;
-}
-.background-card img {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-}
 .upper-part {
   width: 100%;
-  height: 65%;
+  height: 60%;
   display: flex;
   padding: 5px;
   margin-bottom: 0px;
@@ -275,7 +262,7 @@ p {
 }
 .liking {
   position: absolute;
-  top: 75%;
+  top: 78%;
   right: 2%;
 }
 .favourite-btn {
@@ -297,6 +284,7 @@ p {
   cursor: pointer;
 }
 .empty-tab {
+  margin: auto;
   margin-top: 10px;
 }
 

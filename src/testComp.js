@@ -1,22 +1,9 @@
 import React, { Component } from "react";
 
-import { addMovieToFavourite, removeMovieFromFavourite } from "./actions";
-
-class MovieCard extends Component {
-  handleFavouriteClick = () => {
-    const { movie } = this.props;
-    this.props.dispatch(addMovieToFavourite(movie));
-  };
-
-  handleUnfavouriteClick = () => {
-    const { movie } = this.props;
-    this.props.dispatch(removeMovieFromFavourite(movie));
-  };
-
+class testComp extends Component {
   render() {
-    const { movie, isFavourite } = this.props;
     return (
-      <div className="movie-card">
+      <div>
         <div className="upper-part">
           <div className="card-poster">
             <img src={movie.Poster} alt="poster"></img>
@@ -84,14 +71,10 @@ class MovieCard extends Component {
           <div className="movie-plot">{movie.Plot}</div>
         </div>
         <div className="imdb-ratings">
-          <span style={{ backgroundColor: "blue", color: "white", padding: 5 }}>
+          <span style={{ backgroundColor: "red", color: "white" }}>
             {movie.Type.toUpperCase()}
           </span>
-          <span
-            style={{ backgroundColor: "yellow", color: "grey", padding: 5 }}
-          >
-            {movie.imdbRating}
-          </span>
+          <span style={{ backgroundColor: "yellow" }}>{movie.imdbRating}</span>
         </div>
         <div className="liking">
           {isFavourite ? (
@@ -115,4 +98,4 @@ class MovieCard extends Component {
   }
 }
 
-export default MovieCard;
+export default testComp;
