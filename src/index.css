@@ -1,13 +1,327 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.left-nav {
+  width: 40%;
+  display: flex;
+  margin-left: 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.q-menu {
+  display: none;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.hidden-menu {
+  display: none;
+}
+.menu-list li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 8px;
+}
+.menu-list li:hover {
+  color: blueviolet;
+  border-bottom: 1px solid pink;
+  cursor: pointer;
+}
+.menu-list li img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.right-nav {
+  width: auto;
+  height: auto;
+  /* border: 1px solid black; */
+  margin-right: 10px;
+}
+.search-cont {
+  width: 220px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.inp-field {
+  width: 70%;
+  height: 100%;
+}
+.inp-field input {
+  width: 90%;
+  height: 100%;
+  margin-left: 5px;
+  border: none;
+}
+.inp-field input:focus {
+  outline: none;
+}
+.src-btn {
+  width: 25%;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 8px;
+  background-color: yellow;
+  cursor: pointer;
+}
+.search-result {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: auto;
+  border: 1px solid black;
+  background-color: white;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+}
+.search-result-poster {
+  width: 38%;
+  height: 150px;
+}
+.search-result-poster img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.search-result-details {
+  width: 60%;
+  height: 150px;
+  box-sizing: border-box;
+}
+.plotDetails {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 12px;
+  height: 65px;
+  overflow: scroll;
+  text-overflow: ellipsis;
+}
+.search-rating {
+  bottom: 8px;
+  font-size: small;
+  position: absolute;
+}
+
+/* Main */
+.main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.tabs {
+  display: flex;
+  width: 245px;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 20px;
+  position: sticky;
+  top: 70px;
+  background-color: white;
+  z-index: 1;
+}
+.active-tabs {
+  background-color: purple;
+  color: white;
+}
+.tabs-bar {
+  width: 120px;
+  border: 1px solid purple;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.movies-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.movie-card {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.background-card {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  bottom: 10px;
+  left: 50px;
+  opacity: 0.3;
+}
+.background-card img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.upper-part {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  padding: 5px;
+  margin-bottom: 0px;
+  justify-content: space-between;
+}
+.card-poster {
+  height: 100%;
+  width: 28%;
+}
+.card-poster img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.card-details {
+  height: 100%;
+  width: 65%;
+}
+.card-details h3,
+p {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.card-rating {
+  background-color: black;
+  width: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  padding: 3px;
+  margin-top: 6px;
+}
+.border-line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 0px;
+}
+.lower-part {
+  height: 35%;
+  overflow: hidden;
+}
+.movie-plot {
+  text-align: justify;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.imdb-ratings {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+.imdb-ratings span {
+  font-size: 12px;
+  padding: 3px;
+  margin-right: 5px;
+}
+.liking {
+  position: absolute;
+  top: 75%;
+  right: 2%;
+}
+.favourite-btn {
+  width: 80px;
+  height: 30px;
+  outline: none;
+  color: white;
+  background-color: purple;
+  border: none;
+  cursor: pointer;
+}
+.unfavourite-btn {
+  width: 80px;
+  height: 30px;
+  outline: none;
+  color: white;
+  background-color: rgb(128, 19, 0);
+  border: none;
+  cursor: pointer;
+}
+.empty-tab {
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: purple;
+  padding: 20px 0;
+  color: white;
+  font-size: 12px;
+}
+.alt-footer {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: purple;
+  padding: 20px 0;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0%;
 }

@@ -1,0 +1,95 @@
+@media only screen and (max-width: 600px) {
+  /* Navbar */
+  .menu-list li {
+    display: none;
+  }
+  .q-menu {
+    display: inline;
+  }
+  .q-menu img {
+    width: 20px;
+    height: 20px;
+  }
+  .hidden-menu {
+    width: 250px;
+    height: 100vh;
+    background-color: purple;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    padding: 5px;
+  }
+  .hidden-menu ul {
+    margin-top: 10px;
+  }
+  .hidden-menu ul li {
+    padding: 5px 0;
+  }
+  .nav-scl-icn {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    border-top: 1px solid white;
+  }
+  .nav-scl-icn div img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-size: cover;
+  }
+  .nav-close-btn {
+    cursor: pointer;
+  }
+  .nav-close-btn img {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+  }
+
+  /* Main */
+  .movie-card {
+    height: auto;
+    width: 90%;
+  }
+  .upper-part {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+  .liking {
+    top: 50px;
+    right: 10px;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer div {
+    margin: 5px 0;
+  }
+  .alt-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .alt-footer div {
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* Footer */
+  .footer {
+    position: relative;
+  }
+  .alt-footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
